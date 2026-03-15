@@ -13,7 +13,7 @@ while True:
     key = cv.waitKey(1)
     if key != -1:
         key = chr(key).upper()
-        print(key)
+
     if key == "B":
         cv.imshow("Image Window", baletka)
     elif key == "Z":
