@@ -11,14 +11,14 @@ cv.namedWindow("Image Window", cv.WINDOW_AUTOSIZE)
 
 while True:
     key = cv.waitKey(1)
-    
-    if key == ord('b'):
-        cv.imshow('Image Window', baletka)
-    elif key == ord('s'):
-        cv.imshow('Image Window', svadlena)
-    elif key == ord('z'):
-        cv.imshow('Image Window', zpevacka)
-    elif key == 27: # 'ESC' to exit
-        break
+    if key != -1:
+        key = chr(key).upper()
 
-cv.destroyAllWindows()
+    if key == "B":
+        cv.imshow("Image Window", baletka)
+    elif key == "S":
+        cv.imshow("Image Window", svadlena)
+    elif key == "Z":
+        cv.imshow("Image Window", zpevacka)
+    elif key == "Q":
+        break
